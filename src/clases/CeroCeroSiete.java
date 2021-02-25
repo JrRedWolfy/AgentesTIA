@@ -1,4 +1,4 @@
-package Clases;
+package clases;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ public final class CeroCeroSiete extends Agentes {
 	
 	public CeroCeroSiete(String nombre, int edad, String direc, float salario, String[] vArmas, int nMuertes) {
 		super(nombre, edad, direc, salario);
-		this.vArmas = IODatos.cargarDatosArmas("Armas.txt");
+		this.vArmas = IODatos.cargarDatosTexto("Armas.txt");
 		this.nMuertes = nMuertes;
 	}
 	
