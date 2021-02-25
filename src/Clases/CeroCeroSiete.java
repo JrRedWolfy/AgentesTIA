@@ -10,9 +10,9 @@ public final class CeroCeroSiete extends Agentes {
 	private int nMuertes;
 
 	
-	public CeroCeroSiete(String nombre, int edad, String direc, float salario, String[] vArmas, int nMuertes) {
+	public CeroCeroSiete(String nombre, int edad, String direc, float salario, int nMuertes) {
 		super(nombre, edad, direc, salario);
-		this.vArmas = IODatos.cargarDatosArmas("Armas.txt");
+		this.vArmas = Agencia.IODatos("Armas.txt");
 		this.nMuertes = nMuertes;
 	}
 	
