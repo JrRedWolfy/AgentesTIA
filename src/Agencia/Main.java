@@ -11,11 +11,30 @@ public class Main {
 			opc = Menu.menuPrincipal();
 			switch (opc) {
 			case 1: {
-				System.out.println(IODatos.cargarDatosArmas("Armas.txt"));
-			}
-			case 3: {
+					agencia.IODatos.mostrarInfoAgentes(null);
+			}break;
+			case 2:{
 				
-			}
+			}break;
+			case 3: {
+					agencia.IODatos.anadirPiso(null);
+			}break;
+			case 4:{
+					agencia.IODatos.anadirArma(args);
+			}break;
+			case 5:{
+				
+			}break;
+			case 6:{
+				
+			}break;
+			case 7:{
+				
+			}break;
+			case 8:{
+				
+			}break;
+			
 
 			}
 		} while (opc != 8);
