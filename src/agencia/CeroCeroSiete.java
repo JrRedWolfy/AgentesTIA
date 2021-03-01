@@ -2,7 +2,6 @@ package agencia;
 
 import java.util.Arrays;
 
-import clases.IODatos;
 
 public final class CeroCeroSiete extends Agentes {
 
@@ -15,7 +14,7 @@ public final class CeroCeroSiete extends Agentes {
 	public CeroCeroSiete(String nombre, int edad, String direc, float salario, int nMuertes) {
 		super(nombre, edad, direc, salario);
 		
-		this.vArmas = IODatos.cargarDatosTexto("Armas.txt");
+		this.vArmas = vArmas;
 		this.nMuertes = nMuertes;
 	}
 	
@@ -38,7 +37,13 @@ public final class CeroCeroSiete extends Agentes {
 
 	@Override
 	public String toString() {
-		return "CeroCeroSiete [vArmas=" + Arrays.toString(vArmas) + ", nMuertes=" + nMuertes + "]";
+		String armas = "";
+		for (String p : vArmas) {
+			if (p!=null)
+				armas  += p + "\n";
+		}
+		
+		return super.toString() + "CeroCeroSiete [vArmas=" + armas + ", nMuertes=" + nMuertes + "]";
 	}
 	
 	

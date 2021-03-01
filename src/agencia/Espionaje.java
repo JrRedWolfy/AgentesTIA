@@ -2,7 +2,6 @@ package agencia;
 
 import java.util.Arrays;
 
-import clases.IODatos;
 
 public final class Espionaje extends Agentes {
 
@@ -13,7 +12,7 @@ public final class Espionaje extends Agentes {
 	
 	public Espionaje(String nombre, int edad, String direc, float salario) {
 		super(nombre, edad, direc, salario);
-		this.vPiso = IODatos.cargarDatosTexto("Pisos.txt");
+		this.vPiso = vPiso;
 	}
 	
 	public Pisos[] getvPiso() {
@@ -26,7 +25,12 @@ public final class Espionaje extends Agentes {
 
 	@Override
 	public String toString() {
-		return "Espionaje [vPiso=" + Arrays.toString(vPiso) + "]";
+		String pisos = "";
+		for (Pisos p : vPiso) {
+			if (p!=null)
+				pisos  += p + "\n";
+		}
+		return super.toString() + " Espionaje [Pisos = " + pisos + "]";
 	}
 	
 	
