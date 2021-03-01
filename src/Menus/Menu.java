@@ -32,7 +32,7 @@ public class Menu {
 			} catch (Exception e) {
 				System.out.println("Debes introducir un numero entre 1 y 8");
 			}
-		} while (opc > 0 && opc <= 8);
+		} while (opc > 0 || opc <= 8);
 		
 		
 		
