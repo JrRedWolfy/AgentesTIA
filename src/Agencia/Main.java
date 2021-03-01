@@ -1,6 +1,7 @@
 package Agencia;
 
 import Menus.Menu;
+import clases.Agentes;
 
 public class Main {
 
@@ -10,10 +11,30 @@ public class Main {
 		do {
 			opc = Menu.menuPrincipal();
 			switch (opc) {
-			case 1: {
-				System.out.println("Va bien");
-			}
-
+			case 1: 
+				Agentes.mostrarInfoAgentes();
+				break;
+			case 2:
+				Agentes.mostrarAgentesParametro();
+				break;
+			case 3:
+				IODatos.anadirPiso();
+				break;
+			case 4:
+				IODatos.anadirArma();
+				break;
+			case 5:
+				Agentes.anadirAgente();
+				break;
+			case 6:
+				IODatos.encriptarInfo();
+				break;
+			case 7:
+				IODatos.desencriptarInfo();
+				break;
+			case 8:
+				System.out.println("Esperamos volver a verle pronto");
+				break;
 			}
 		} while (opc != 8);
 

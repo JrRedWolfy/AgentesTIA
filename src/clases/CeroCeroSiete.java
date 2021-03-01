@@ -12,11 +12,8 @@ public final class CeroCeroSiete extends Agentes {
 	
 	public CeroCeroSiete(String nombre, int edad, String direc, float salario, int nMuertes) {
 		super(nombre, edad, direc, salario);
-<<<<<<< HEAD:src/Clases/CeroCeroSiete.java
-		this.vArmas = Agencia.IODatos("Armas.txt");
-=======
+		
 		this.vArmas = IODatos.cargarDatosTexto("Armas.txt");
->>>>>>> Herencia:src/clases/CeroCeroSiete.java
 		this.nMuertes = nMuertes;
 	}
 	

@@ -55,13 +55,10 @@ public class Agentes {
 		return "Agentes [nombre=" + nombre + ", edad=" + edad + ", direc=" + direc + ", salario=" + salario + "]";
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
+	public static void mostrarInfoAgentes() {
+		
+		
+		
+	}
 	
 }
