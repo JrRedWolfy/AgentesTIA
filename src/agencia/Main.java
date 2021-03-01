@@ -8,27 +8,30 @@ public class Main {
 		// TODO Auto-generated method stub
 		int opc = 0;
 		
-		String ListaArmas[]= new String[40];
-		IODatos.rellenarArmas(ListaArmas);
+		String listaArmas[]= new String[40];
+		IODatos.rellenarArmas(listaArmas);
+		
+		Pisos listaPisos[]= new Pisos[20];
+		IODatos.rellenarPisos(listaPisos);
 		
 		Agentes vAgentes[] = new Agentes[10];
-		IODatos.mostrarInfoAgentes(vAgentes);
+		
 		
 		
 		do {
 			opc = Menu.menuPrincipal();
 			switch (opc) {
 			case 1: 
-				Agentes.mostrarInfoAgentes();
+				IODatos.mostrarInfoAgentes(vAgentes);
 				break;
 			case 2:
-				Agentes.mostrarAgentesParametro();
+				IODatos.mostrarAgentesParametro(vAgentes);
 				break;
 			case 3:
-				IODatos.anadirPiso();
+				IODatos.anadirPiso(listaPisos);
 				break;
 			case 4:
-				IODatos.anadirArma();
+				IODatos.anadirArma(listaArmas);
 				break;
 			case 5:
 				Agentes.anadirAgente();

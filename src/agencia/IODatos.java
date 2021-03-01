@@ -100,6 +100,57 @@ public static void mostrarInfoAgentes(Agentes[] vAgentes) {
 	}	
 }
 
+public static void mostrarAgentesParametro(Agentes[] vAgentes) {
+	
+	Scanner leer = new Scanner(System.in);
+	
+	int cantidad = 0;
+	System.out.println("Introduce una cantidad y le devolveremos aquellos agentes que ganen mas");
+	cantidad = leer.nextInt();
+	
+	for (Agentes agente : vAgentes) {
+		if ((agente!= null) && (agente.getSalario()>cantidad))
+			System.out.println(agente);
+	}	
+}
+
+public static void rellenarPisos(Pisos[] vPisos) {
+	File f = new File("Pisos.txt");
+	FileReader fr =null;
+	Scanner leer = null;
+	int nPisos = 0;
+	if (!f.exists()) {
+		try {
+			f.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	} try {
+		fr = new FileReader(f);
+		leer = new Scanner(fr);
+		
+		while(leer.hasNext()) {
+			String info = leer.nextLine();
+			
+			vPisos[nPisos] = new Pisos("","",0);
+			nPisos += 1;
+		}
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} finally {
+		leer.close();
+		try {
+			fr.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}
+
 
 
 }
