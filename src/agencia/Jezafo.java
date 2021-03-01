@@ -1,4 +1,4 @@
-package clases;
+package agencia;
 
 public final class Jezafo extends Agentes {
 

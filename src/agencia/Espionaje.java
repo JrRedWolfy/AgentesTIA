@@ -1,6 +1,8 @@
-package clases;
+package agencia;
 
 import java.util.Arrays;
+
+import clases.IODatos;
 
 public final class Espionaje extends Agentes {
 
