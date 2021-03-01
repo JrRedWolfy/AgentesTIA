@@ -6,8 +6,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-import clases.vPiso;
-
 public class IODatos {
 
 
@@ -93,6 +91,13 @@ public static void anadirPiso(Pisos[] vPiso) {
 			break;
 		}
 	}
+}
+
+public static void mostrarInfoAgentes(Agentes[] vAgentes) {
+	for (Agentes agente : vAgentes) {
+		if (agente!= null)
+			System.out.println(agente);
+	}	
 }
 
 

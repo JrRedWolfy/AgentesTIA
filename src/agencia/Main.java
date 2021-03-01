@@ -8,8 +8,12 @@ public class Main {
 		// TODO Auto-generated method stub
 		int opc = 0;
 		
-		String vArmas[]= new String[40];
-		IODatos.rellenarArmas(vArmas);
+		String ListaArmas[]= new String[40];
+		IODatos.rellenarArmas(ListaArmas);
+		
+		Agentes vAgentes[] = new Agentes[10];
+		IODatos.mostrarInfoAgentes(vAgentes);
+		
 		
 		do {
 			opc = Menu.menuPrincipal();
