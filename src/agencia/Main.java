@@ -29,7 +29,7 @@ public class Main {
 				IODatos.anadirArma();
 				break;
 			case 5:
-				Agentes.anadirAgente(vAgentes);
+				IODatos.anadirAgente(vAgentes);
 				break;
 			case 6:
 				IODatos.encriptarInfo();

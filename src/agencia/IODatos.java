@@ -137,5 +137,44 @@ public static void anadirAgente(ArrayList<Agentes> vAgentes) {
 
 
 
+public static ArrayList<String> cargarArmas() {
+	ArrayList<String> vArmas = new ArrayList();
+	File f = new File("Armas.txt");
+	FileReader fr =null;
+	Scanner leer = null;
+	
+	if (!f.exists()) {
+		try {
+			f.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	} try {
+		fr = new FileReader(f);
+		leer = new Scanner(fr);
+		
+		while(leer.hasNext()) {
+			String info = leer.nextLine();
+			
+			vArmas.add(info);
+		}
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} finally {
+		leer.close();
+		try {
+			fr.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	return vArmas;
+}
+
+
+
 
 }

@@ -7,7 +7,7 @@ import java.util.Arrays;
 public final class CeroCeroSiete extends Agentes {
 
 	
-	private ArrayList<String> vArmas = new ArrayList();
+	private ArrayList<String> vArmas;
 	
 	private int nMuertes;
 
@@ -15,18 +15,9 @@ public final class CeroCeroSiete extends Agentes {
 	public CeroCeroSiete(String nombre, int edad, String direc, float salario, int nMuertes) {
 		super(nombre, edad, direc, salario);
 		
-		this.vArmas = vArmas;
+		this.vArmas = IODatos.cargarArmas();
 		this.nMuertes = nMuertes;
 	}
-	
-	
-	public String[] getvArmas() {
-		return vArmas;
-	}
-	public void setvArmas(String[] vArmas) {
-		this.vArmas = vArmas;
-	}
-
 	
 	public int getnMuertes() {
 		return nMuertes;
