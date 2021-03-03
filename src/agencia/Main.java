@@ -29,13 +29,17 @@ public class Main {
 				IODatos.anadirArma();
 				break;
 			case 5:
+<<<<<<< Updated upstream
 				Agentes.anadirAgente(vAgentes);
+=======
+			
+>>>>>>> Stashed changes
 				break;
 			case 6:
-				IODatos.encriptarInfo();
+				
 				break;
 			case 7:
-				IODatos.desencriptarInfo();
+				
 				break;
 			case 8:
 				System.out.println("Esperamos volver a verle pronto");
