@@ -1,5 +1,7 @@
 package agencia;
 
+import java.util.ArrayList;
+
 import Menus.Menu;
 
 public class Main {
@@ -8,14 +10,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		int opc = 0;
 		
-		String listaArmas[]= new String[40];
-		IODatos.rellenarArmas(listaArmas);
-		
-		Pisos listaPisos[]= new Pisos[20];
-		IODatos.rellenarPisos(listaPisos);
-		
-		Agentes vAgentes[] = new Agentes[10];
-		
+		ArrayList<Agentes> vAgentes = new ArrayList();
 		
 		
 		do {
@@ -31,10 +26,10 @@ public class Main {
 				IODatos.anadirPiso(listaPisos);
 				break;
 			case 4:
-				IODatos.anadirArma(listaArmas);
+				IODatos.anadirArma();
 				break;
 			case 5:
-				Agentes.anadirAgente();
+				Agentes.anadirAgente(vAgentes);
 				break;
 			case 6:
 				IODatos.encriptarInfo();

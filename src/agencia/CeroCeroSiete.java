@@ -1,12 +1,13 @@
 package agencia;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
 public final class CeroCeroSiete extends Agentes {
 
 	
-	private String[] vArmas;
+	private ArrayList<String> vArmas = new ArrayList();
 	
 	private int nMuertes;
 

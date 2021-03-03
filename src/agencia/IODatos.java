@@ -3,18 +3,26 @@ package agencia;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class IODatos {
 
-
-public static void rellenarArmas(String[] vArmas) {
+public static void anadirArma() {
+	
+	Scanner leer = new Scanner(System.in);
+	
+	System.out.println("Escriba el nombre del arma que desea dar de alta");
+	String arma = leer.next();
+	
+	
 	
 	File f = new File("Armas.txt");
-	FileReader fr =null;
-	Scanner leer = null;
-	int nArmas = 0;
+	
+	
 	if (!f.exists()) {
 		try {
 			f.createNewFile();
@@ -22,48 +30,17 @@ public static void rellenarArmas(String[] vArmas) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	} try {
-		fr = new FileReader(f);
-		leer = new Scanner(fr);
+	} try (FileWriter fw = new FileWriter(f,true);
+			PrintWriter escribir = new PrintWriter(fw)){
 		
-		while(leer.hasNext()) {
-			String info = leer.nextLine();
+			escribir.println(arma);
 			
-			vArmas[nArmas]=info;
-			nArmas += 1;
-		}
 	} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
-	} finally {
-		leer.close();
-		try {
-			fr.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-}
-
-public static void anadirArma(String[] vArma) {
-	
-	//Correccion: Introducir el arma en el fichero y ya
-	
-	Scanner leer = new Scanner(System.in); // para guardar String
-	
-	String arma;
-	
-	System.out.println("Escriba el nombre del arma que desea dar de alta");
-	arma = leer.next();
-	
-	for(int i = 0; i <= 10; i++) {
-		if (vArma == null) {
-			
-			vArma[i] = arma;
-			break;
-		}
+	} catch (IOException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
 	}
 	
 }
@@ -87,20 +64,20 @@ public static void anadirPiso(Pisos[] vPiso) {
 	for(int i = 0; i <= 10; i++) {
 		if (vPiso == null) {
 			
-			vPiso[i] = new vPiso(ubicacion,calle,numeroC);
+			vPiso[i] = new Pisos(ubicacion,calle,numeroC);
 			break;
 		}
 	}
 }
 
-public static void mostrarInfoAgentes(Agentes[] vAgentes) {
+public static void mostrarInfoAgentes(ArrayList<Agentes> vAgentes) {
 	for (Agentes agente : vAgentes) {
-		if (agente!= null)
+		
 			System.out.println(agente);
-	}	
+	}
 }
 
-public static void mostrarAgentesParametro(Agentes[] vAgentes) {
+public static void mostrarAgentesParametro(ArrayList<Agentes> vAgentes) {
 	
 	Scanner leer = new Scanner(System.in);
 	
@@ -109,7 +86,7 @@ public static void mostrarAgentesParametro(Agentes[] vAgentes) {
 	cantidad = leer.nextInt();
 	
 	for (Agentes agente : vAgentes) {
-		if ((agente!= null) && (agente.getSalario()>cantidad))
+		if (agente.getSalario()>cantidad)
 			System.out.println(agente);
 	}	
 }
@@ -150,6 +127,14 @@ public static void rellenarPisos(Pisos[] vPisos) {
 	}
 	
 }
+
+public static void anadirAgente(ArrayList<Agentes> vAgentes) {
+	
+	
+	
+	
+}
+
 
 
 
