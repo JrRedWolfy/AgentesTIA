@@ -1,4 +1,4 @@
-package clases;
+package agencia;
 
 public class Agentes {
 
@@ -55,13 +55,6 @@ public class Agentes {
 		return "Agentes [nombre=" + nombre + ", edad=" + edad + ", direc=" + direc + ", salario=" + salario + "]";
 	}
 
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

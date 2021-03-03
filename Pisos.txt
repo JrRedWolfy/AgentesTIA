@@ -1,0 +1,10 @@
+Alcañiz, Paseo Andrade numero 2
+Huesca, Paseo Sagasta numero 4
+Montreal, Paseo del Sol numero 3
+Teruel, Calle Obelisco numero 12
+Dinamarca, Calle Denille Latoz numero 6
+Japon, Distrito Shen Ju numero 1
+Urrea, Calle Principal numero 14
+Alaska, Villa Soleada numero 3
+Mexico, Calle del Taco numero 9
+San Francisco, Calle Alta numero 7
