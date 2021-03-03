@@ -45,7 +45,7 @@ public static void anadirArma() {
 	
 }
 
-public static void anadirPiso(Pisos[] vPiso) {
+public static void anadirPiso() {
 	
 	Scanner leer = new Scanner(System.in); // para guardar String
 	Scanner ver = new Scanner(System.in); // Para guardar int
@@ -61,13 +61,7 @@ public static void anadirPiso(Pisos[] vPiso) {
 	System.out.println("Escriba el nombre de la ubicacion del piso");
 	numeroC = ver.nextInt();
 	
-	for(int i = 0; i <= 10; i++) {
-		if (vPiso == null) {
-			
-			vPiso[i] = new Pisos(ubicacion,calle,numeroC);
-			break;
-		}
-	}
+	//abrir fichero texto y guardar los datos
 }
 
 public static void mostrarInfoAgentes(ArrayList<Agentes> vAgentes) {

@@ -23,7 +23,7 @@ public class Main {
 				IODatos.mostrarAgentesParametro(vAgentes);
 				break;
 			case 3:
-				IODatos.anadirPiso(listaPisos);
+				IODatos.anadirPiso();
 				break;
 			case 4:
 				IODatos.anadirArma();
