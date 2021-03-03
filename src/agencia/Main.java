@@ -32,10 +32,10 @@ public class Main {
 				IODatos.anadirAgente(vAgentes);
 				break;
 			case 6:
-				IODatos.encriptarInfo();
+				
 				break;
 			case 7:
-				IODatos.desencriptarInfo();
+				
 				break;
 			case 8:
 				System.out.println("Esperamos volver a verle pronto");
