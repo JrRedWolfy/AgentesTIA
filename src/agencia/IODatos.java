@@ -45,8 +45,8 @@ public static void anadirArma() {
 	
 }
 
-public static void anadirPiso() {
-	
+public static void anadirPiso(ArrayList<agencia.Pisos> Pisos) {
+	ArrayList<agencia.Pisos> vPiso = new ArrayList();
 	Scanner leer = new Scanner(System.in); // para guardar String
 	Scanner ver = new Scanner(System.in); // Para guardar int
 	
@@ -61,8 +61,15 @@ public static void anadirPiso() {
 	System.out.println("Escriba el nombre de la ubicacion del piso");
 	numeroC = ver.nextInt();
 	
-	//abrir fichero texto y guardar los datos
+	for(int i = 0; i <= 10; i++) {
+		if (vPiso == null) {
+			
+			vPiso[i] = new Pisos(ubicacion,calle,numeroC);
+			break;
+		}
+	}
 }
+
 
 public static void mostrarInfoAgentes(ArrayList<Agentes> vAgentes) {
 	for (Agentes agente : vAgentes) {
